@@ -1,0 +1,5 @@
+$ curl -X PATCH \
+	-H "Content-Type: application/json" \
+	-H "Authorization: Bearer 1a2b3c4d5f" \
+	-d '{"config": "UserKnownHostsFile /dev/null"}' \
+	{{ env.DJINN_API_SERVER }}/keys/1

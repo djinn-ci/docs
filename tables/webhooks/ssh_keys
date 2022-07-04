@@ -1,0 +1,21 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `action`
+- `enum`
+- The action performed on the SSH key, will be one of:
+\
+* `created`
+* `updated`
+* `deleted`
+
+---
+
+- `ssh_key`
+- `object`
+- The [SSH key](/api/keys#key-object) the action was performed on.

@@ -1,0 +1,54 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `id`
+- `int`
+- Unique ID for the image.
+
+---
+
+- `namespace_id`
+- `int`
+- ID of the [namespace](/api/namespaces#namespace-entity) the invite was sent
+for.
+
+---
+
+- `invitee_id`
+- `int`
+- ID of the [user](/api/user#user-entity) who received the invite.
+
+---
+
+- `inviter_id`
+- `int`
+- ID of the [user](/api/user#user-entity) who sent the invite.
+
+---
+
+- `url`
+- `string`
+- The API URL for the invite entity itself.
+
+---
+
+- `invitee`
+- `object`
+- The [user](/api/user#user-entity) who received the invite.
+
+---
+
+- `inviter`
+- `object`
+- The [user](/api/user#user-entity) who sent the invite.
+
+---
+
+- `namespace`
+- `object`
+- The [namespace](/api/namespaces#namespace-entity) the invite was for.

@@ -1,0 +1,6 @@
+site/
+node_modules/
+__pycache__/
+plugins/build/
+plugins/dist/
+plugins/*.egg-info/

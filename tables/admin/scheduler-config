@@ -1,0 +1,97 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `drivers`
+- `string[]`
+- The list of drivers supported on the server. This should match what is in the
+[server configuration](/admin/server#configuring-the-server).
+
+---
+
+- `crypto`
+- `object`
+- Configuration settings for generating names for artifacts.
+
+---
+
+- `crypto.salt`
+- `string`
+- Salt the is used to generate secrets. Must match what is in the
+[server configuration](/admin/server#configuring-the-server).
+
+---
+
+- `database`
+- `object`
+- Provides connection information to the PostgreSQL database.
+
+---
+
+- `database.addr`
+- `string`
+- The address of the PostgreSQL server to connect to.
+
+---
+
+- `database.name`
+- `string`
+- The name of the database to use.
+
+---
+
+- `database.username`
+- `string`
+- The name of the database user.
+
+---
+
+- `database.password`
+- `string`
+- The password of the database user.
+
+---
+
+- `database.tls`
+- `object`
+- TLS configuration for connecting via TLS.
+
+---
+
+- `database.tls.ca`
+- `string`
+- Path to the CA root to use.
+
+---
+
+- `database.tls.cert`
+- `string`
+- Path to the certificate to use.
+
+---
+
+- `database.tls.key`
+- `string`
+- Path to the key to use.
+
+---
+
+- `redis`
+- `object`
+- Providers connection information to the Redis database.
+
+---
+
+- `redis.addr`
+- `string`
+- The address of the Redis server to connect to.
+
+---
+
+- `redis.password`
+- `string`
+- The password used if the Redis server is password protected.

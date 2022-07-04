@@ -1,0 +1,127 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `id`
+- `int`
+- Unique ID for the cron.
+
+---
+
+- `author_id`
+- `int`
+- ID of the [user](/api/user#user-entity) who created the cron job.
+
+---
+
+- `user_id`
+- `int`
+- ID of the [user](/api/user#user-entity) who owns the cron job.
+
+---
+
+- `namespace_id`
+- `int`
+\
+`nullable`
+- ID of the [namespace](/api/namespaces#namespace-entity) the cron job belongs to
+if any.
+
+---
+
+- `name`
+- `string`
+- The name of the cron job.
+
+---
+
+- `schedule`
+- `enum`
+- The schedule of the cron job, will be one of:
+\
+* `daily`
+* `weekly`
+* `monthly`
+
+---
+
+- `manifest`
+- `string`
+- The build manifest the cron job submits on its interval.
+
+---
+
+- `next_run`
+- `timestamp`
+- The RFC3339 formatted string at which the cron job will next run.
+
+---
+
+- `manifest`
+- `string`
+- The build manifest the cron job submits on its interval.
+
+---
+
+- `next_run`
+- `timestamp`
+- The RFC3339 formatted string at which the cron job will next run.
+
+---
+
+- `manifest`
+- `string`
+- The build manifest the cron job submits on its interval.
+
+---
+
+- `next_run`
+- `timestamp`
+- The RFC3339 formatted string at which the cron job will next run.
+
+---
+
+- `manifest`
+- `string`
+- The build manifest the cron job submits on its interval.
+
+---
+
+- `next_run`
+- `timestamp`
+- The RFC3339 formatted string at which the cron job will next run.
+
+---
+
+- `created_at`
+- `timestamp`
+- The RFC3339 formatted string at which the cron job was created.
+
+---
+
+- `url`
+- `string`
+- The API URL to the cron entity itself.
+
+---
+
+- `author`
+- `object`
+- The [user](/api/user#user-entity) who authored the cron job.
+
+---
+
+- `user`
+- `object`
+- The [user](/api/user#user-entity) the cron job belongs to.
+
+---
+
+- `namespace`
+- `object`
+- The [namespace](/api/namespaces#namespace-entiity) the cron job belongs to, if
+any.

@@ -1,0 +1,184 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `parallelism`
+- `int`
+- The parallelism to use when running multiple builds at once. Set to `0` to use
+the number of CPU cores available.
+
+---
+
+- `driver`
+- `string`
+- The driver that will be used for executing builds on the worker.
+
+---
+
+- `crypto`
+- `object`
+- Configuration settings for generating names for artifacts.
+
+---
+
+- `crypto.block`
+- `string`
+- The block key used for encrypting data. This must be either 16, 24, or 32
+characters in length.
+
+---
+
+- `crypto.salt`
+- `string`
+- Salt the is used to generate secret.
+
+---
+
+- `database`
+- `object`
+- Provides connection information to the PostgreSQL database.
+
+---
+
+- `database.addr`
+- `string`
+- The address of the PostgreSQL server to connect to.
+
+---
+
+- `database.name`
+- `string`
+- The name of the database to use.
+
+---
+
+- `database.username`
+- `string`
+- The name of the database user.
+
+---
+
+- `database.password`
+- `string`
+- The password of the database user.
+
+---
+
+- `database.tls`
+- `object`
+- TLS configuration for connecting via TLS.
+
+---
+
+- `database.tls.ca`
+- `string`
+- Path to the CA root to use.
+
+---
+
+- `database.tls.cert`
+- `string`
+- Path to the certificate to use.
+
+---
+
+- `database.tls.key`
+- `string`
+- Path to the key to use.
+
+---
+
+- `redis`
+- `object`
+- Providers connection information to the Redis database.
+
+---
+
+- `redis.addr`
+- `string`
+- The address of the Redis server to connect to.
+
+---
+
+- `redis.password`
+- `string`
+- The password used if the Redis server is password protected.
+
+---
+
+- `smtp`
+- `object`
+- Provides connection innformation to an SMTP server for sending emails.
+
+---
+
+- `smtp.addr`
+- `string`
+- The address of the SMTP server.
+
+---
+
+- `smtp.ca`
+- `string`
+- The path to the root CA if connecting via TLS.
+
+---
+
+- `admin`
+- `string`
+- The email address to be used in the `From` field of emails that are sent.
+
+---
+
+- `username`
+- `string`
+- The username for authentication.
+
+---
+
+- `pasword`
+- `string`
+- The password for authentication.
+
+---
+
+- `store label`
+- `object`
+- Configuration parameters for each of the file stores the server uses. The
+`label` will be the store type, one of:
+\
+* `artifacts`
+* `images`
+* `objects`
+\
+there must be a store configuration block for each.
+
+---
+
+- `store.type`
+- `string`
+- The type of the store to use. Must be `file`.
+
+---
+
+- `store.path`
+- `string`
+- The location where the files are.
+
+---
+
+- `store.limit`
+- `int`
+- The maximum size of files being stored. Set to `0` for no limit.
+
+---
+
+- `provider label`
+- `object`
+- Configuration parameters for reach third-party provider you want to integrate
+with, where the `label` is the name of that provider. As of now, only `github`,
+and `gitlab` are supported.

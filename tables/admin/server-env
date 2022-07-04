@@ -1,0 +1,20 @@
+
+
+- NAME
+- DESCRIPTION
+
+---
+
+- `DJINN_API_DOCS`
+- URL to the API documentation. This link is rendered in the sidebar, if set.
+
+---
+
+- `DJINN_API_SERVER`
+- URL to the API server. This is used when emitting webhook events to ensure
+the links in payload events point back to the API.
+
+---
+
+- `DJINN_USER_DOCS`
+- URL to the user documentation. This link is rendered in the sidebar, if set.

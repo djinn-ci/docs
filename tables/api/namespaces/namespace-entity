@@ -1,0 +1,142 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `id`
+- `int`
+- Unique ID for the namespace.
+
+---
+
+- `user_id`
+- `int`
+- ID of the [user](/api/user#user-entity) who owns the namespace.
+
+---
+
+- `root_id`
+- `int`
+- ID of the top-level namespace for the current namespace. This will match the
+`id` for the root namespace.
+
+---
+
+- `parent_id`
+- `int`
+\
+`nullable`
+- ID of the namespace's parent, if any.
+
+---
+
+- `name`
+- `string`
+- The name of the current namespace.
+
+---
+
+- `path`
+- `string`
+- The fulle path of the namespace, this will include the parent namespace names.
+
+---
+
+- `description`
+- `string`
+- The description of the current namespace.
+
+---
+
+- `visibility`
+- `enum`
+- The visibility level of the namespace, will be one of:
+\
+* `private`
+* `internal`
+* `public`
+
+---
+
+- `created_at`
+- `timestamp`
+- The RFC3339 formatted string at which the namespace was created.
+
+---
+
+- `url`
+- `string`
+- The API URL to the namespace entity itself.
+
+---
+
+- `builds_url`
+- `string`
+- The API URL to the namespace's builds.
+
+---
+
+- `namespaces_url`
+- `string`
+- The API URL to the namespace's children.
+
+---
+
+- `images_url`
+- `string`
+- The API URL to the namespace's images.
+
+---
+
+- `objects_url`
+- `string`
+- The API URL to the namespace's objects.
+
+---
+
+- `variables_url`
+- `string`
+- The API URL to the namespace's variables.
+
+---
+
+- `keys_url`
+- `string`
+- The API URl to the namespace's keys.
+
+---
+
+- `collaborators_url`
+- `string`
+- The API URL to the namespace's collaborators.
+
+---
+
+- `webhooks_url`
+- `string`
+- The API URL to the namespace's webhooks.
+
+---
+
+- `user`
+- `object`
+`nullable`
+- The [user](/api/user#user-entity) of the namespace.
+
+---
+
+- `parent`
+- `object`
+`nullable`
+- The parent of the namespace, if any.
+
+---
+
+- `build`
+- `object`
+`nullable`
+- The [build](/api/builds#build-entity) that was most recently submitted to the
+namespace, if any.

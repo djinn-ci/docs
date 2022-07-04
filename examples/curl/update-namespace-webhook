@@ -1,0 +1,5 @@
+$ curl -X POST \
+	-H "Content-Type: application/json" \
+	-H "Authorization: Bearer 1a2b3c4d5f" \
+	-d '{"secret": "some_secret_password"}' \
+	{{ env.DJINN_API_SERVER }}/n/me/djinn/-/webhooks/1

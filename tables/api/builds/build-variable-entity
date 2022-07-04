@@ -1,0 +1,47 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `id`
+- `int`
+- Unique ID for the variable.
+
+---
+
+- `build_id`
+- `int`
+- ID of the [build](#build-entity) the variable belongs to.
+
+---
+
+- `key`
+- `string`
+- The name of the variable.
+
+---
+
+- `value`
+- `string`
+- The value of the variable.
+
+---
+
+- `masked`
+- `bool`
+- Whether or not the variable was masked.
+
+---
+
+- `variable_url`
+- `string`
+- The API URL to the original [variable](/api/variables#variable-entity) itself.
+
+---
+
+- `build`
+- `object`
+- The [build](#build-object) of the variable.

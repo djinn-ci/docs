@@ -1,0 +1,53 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `id`
+- `int`
+- Unique ID for the tag.
+
+---
+
+- `user_id`
+- `int`
+- ID of the [user](/api/user#user-entity) who created the tag.
+
+---
+
+- `build_id`
+- `int`
+- ID of the [build](#build-entity) the tag belongs to.
+
+---
+
+- `name`
+- `string`
+- The name of the tag.
+
+---
+
+- `created_at`
+- `timestamp`
+- The RFC3339 formatted string at which the tag was created.
+
+---
+
+- `url`
+- `string`
+- The API URL to the tag object itself.
+
+---
+
+- `user`
+- `object`
+- The [user](/api/user#user-entity) of the tag.
+
+---
+
+- `build`
+- `object`
+- The [build](#build-entity) of the tag.

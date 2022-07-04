@@ -1,0 +1,75 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `id`
+- `int`
+- Unique ID for the artifact.
+
+---
+
+- `build_id`
+- `int`
+- ID of the [build](#build-entity) the artifact belongs to.
+
+---
+
+- `job_id`
+- `int`
+- ID of the [job](#job-entity) the artifact belongs to.
+
+---
+
+- `source`
+- `string`
+- The original name of the artifact from the build environment.
+
+---
+
+- `name`
+- `string`
+- The name of the artifact it was collected as.
+
+---
+
+- `size`
+- `int`
+\
+`nullable`
+- The size of the artifact. This will be `null` if it was not collected.
+
+---
+
+- `md5`
+- `string`
+`nullable`
+- The MD5 hash of the artifact. This will be `null` if it was not collected.
+
+---
+
+- `sha256`
+- `string`
+`nullable`
+- The SHA256 hash of the artifact. This will be `null` if it was not collected.
+
+---
+
+- `created_at`
+- `timestamp`
+- The RFC3339 formatted time at which the artifact was created.
+
+---
+
+- `url`
+- `string`
+- The API URL to the artifact object itself.
+
+---
+
+- `build`
+- `object`
+- The [build](#build-entity) of the artifact.

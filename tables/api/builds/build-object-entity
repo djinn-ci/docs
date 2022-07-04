@@ -1,0 +1,50 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `id`
+- `int`
+- Unique ID for the build object.
+
+---
+
+- `build_id`
+- `int`
+- ID of the [build](#build-entity)
+
+---
+
+- `source`
+- `string`
+- The original name of the object.
+
+---
+
+- `name`
+- `string`
+- The name of the object it was placed as.
+
+---
+
+- `type`
+- `string`
+`nullable`
+- The MIME type of the object.
+
+---
+
+- `md5`
+- `string`
+`nullable`
+- The MD5 hash of the object.
+
+---
+
+- `sha256`
+- `string`
+`nullable`
+- The SHA256 hash of the object.

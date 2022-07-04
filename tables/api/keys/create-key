@@ -1,0 +1,34 @@
+
+
+- NAME
+- TYPE
+- REQUIRED
+- DESCRIPTION
+
+---
+
+- `namespace`
+- `string`
+- No
+- The namespace to store the key in.
+
+---
+
+- `name`
+- `string`
+- Yes
+- The name of the key.
+
+---
+
+- `key`
+- `string`
+- Yes
+- The private key.
+
+---
+
+- `config`
+- `string`
+- No
+- The SSH configuration for the key.

@@ -1,0 +1,88 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `id`
+- `int`
+- Unique ID for the job.
+
+---
+
+- `build_id`
+- `int`
+- ID of the [build](#build-entity) the job belongs to.
+
+---
+
+- `stage`
+- `string`
+- The name of the stage the job belongs to.
+
+---
+
+- `name`
+- `string`
+- The name of the job.
+
+---
+
+- `commmands`
+- `string`
+- The commands for the job.
+
+---
+
+- `status`
+- `enum`
+- The status of the build, will be one of:
+\
+* `queued`
+* `running`
+* `passed`
+* `passed_with_failures`
+* `failed`
+* `killed`
+* `timed_out`
+
+---
+
+- `output`
+- `string`
+`nullable`
+- The output of the job, if any.
+
+---
+
+- `created_at`
+- `timestamp`
+- The RFC3339 formatted string at which the job was created.
+
+---
+
+- `started_at`
+- `timestamp`
+`nullable`
+- The RFC3339 formatted string at which the job started.
+
+---
+
+- `finished_at`
+- `timestamp`
+`nullable`
+- The RFC3339 formatted string at which the job finished.
+
+---
+
+- `url`
+- `string`
+- The API URL to the job object itself.
+
+---
+
+- `build`
+- `object`
+- The [build](#build-entity) of the job.

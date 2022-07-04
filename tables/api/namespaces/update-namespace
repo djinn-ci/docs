@@ -1,0 +1,26 @@
+
+
+- NAME
+- TYPE
+- REQUIRED
+- DESCRIPTION
+
+---
+
+- `description`
+- `string`
+- No
+- The new description for the namespace.
+
+---
+
+- `visibility`
+- `enum`
+- No
+- The new visibility level for the namespace, will be one of:
+\
+* `private`
+* `internal`
+* `public`
+\
+This will default to `private`, if not otherwise specified.

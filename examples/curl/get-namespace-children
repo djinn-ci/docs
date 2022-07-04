@@ -1,0 +1,3 @@
+$ curl -X GET \
+	-H "Authorization: Bearer 1a2b3c4d5f" \
+	{{ env.DJINN_API_SERVER }}/n/me/djinn/-/namespaces

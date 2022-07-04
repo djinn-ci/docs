@@ -1,0 +1,12 @@
+$ curl -X POST \
+	-H "Authorization: Bearer 1a2b3c4d5f" \
+	-H "Content-Type: image/jpeg" \
+	-d "@image.jpeg" \
+	{{ env.DJINN_API_SERVER }}/objects?name=data
+
+
+$ curl -X POST \
+	-H "Authorization: Bearer 1a2b3c4d5f" \
+	-H "Content-Type: image/jpeg" \
+	-d "@image.jpeg" \
+	{{ env.DJINN_API_SERVER }}/objects?name=data&namespace=djinn

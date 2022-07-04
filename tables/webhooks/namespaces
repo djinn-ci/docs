@@ -1,0 +1,21 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `action`
+- `enum`
+- The action performed on the namespace, will be one of:
+\
+* `created`
+* `updated`
+* `deleted`
+
+---
+
+- `namespace`
+- `object`
+- The [namespace](/api/namespaces#namespace-object) the action was performed on.

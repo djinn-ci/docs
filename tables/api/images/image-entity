@@ -1,0 +1,74 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `id`
+- `int`
+- Unique ID for the image.
+
+---
+
+- `author_id`
+- `int`
+- ID of the [user](/api/user#user-entity) who created the image.
+
+---
+
+- `user_id`
+- `int`
+- ID of the [user](/api/user#user-entity) who owns the image.
+
+---
+
+- `namespace_id`
+- `int`
+\
+`nullable`
+- ID of the [namespace](/api/namespaces#namespace-entity) the image belongs to
+if any.
+
+---
+
+- `name`
+- `string`
+- The name of the image.
+
+---
+
+- `created_at`
+- `timestamp`
+- The RFC3339 formatted string at which the image was created.
+
+---
+
+- `url`
+- `string`
+- The API URL for the image entity itself.
+
+---
+
+- `author`
+- `object`
+\
+`nullable`
+- The [user](/api/user#user-entity) who authored the image.
+
+---
+
+- `user`
+- `object`
+\
+`nullable`
+- The [user](/api/user#user-entity) the image belongs to.
+
+---
+
+- `namespace`
+- `object`
+\
+`nullable`
+- The [namespace](/api/namespaces#namespace-entity) the image belongs to, if any.

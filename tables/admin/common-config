@@ -1,0 +1,30 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `pidfile`
+- `string`
+- The file to which the PID should be written when the process starts.
+
+---
+
+- `log label`
+- `string`
+- Configure logging for the process. The `label` should be one of:
+\
+* `debug`
+* `info`
+* `warn`
+* `error`
+
+---
+
+- `include`
+- `string`
+\
+`string[]`
+- The file or files to include in the configuration file.

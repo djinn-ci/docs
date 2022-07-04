@@ -1,0 +1,13 @@
+
+
+- NAME
+- TYPE
+- REQUIRED
+- DESCRIPTION
+
+---
+
+- `--`
+- `string[]`
+- Yes
+- An array of strings submitted as the request body.

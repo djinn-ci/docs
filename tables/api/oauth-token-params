@@ -1,0 +1,19 @@
+
+
+- NAME
+- DESCRIPTION
+
+---
+
+- `client_id`
+- The client ID you received from Djinn CI when you created a new app.
+
+---
+
+- `client_secret`
+- The client secret you received from Djinn CI when you created a new app.
+
+---
+
+- `code`
+- The code you recived during the redirect back to your app.

@@ -1,0 +1,35 @@
+
+
+- NAME
+- TYPE
+- REQUIRED
+- DESCRIPTION
+
+---
+
+- `namespace`
+- `string`
+- No
+- The namespace to store the variable in.
+
+---
+
+- `key`
+- `string`
+- Yes
+- The name of the variable.
+
+---
+
+- `value`
+- `string`
+- Yes
+- The value of the variable.
+
+---
+
+- `mask`
+- `bool`
+- No
+- Whether the variable should be masked. Masked variable values must be at
+least 6 characters in length.

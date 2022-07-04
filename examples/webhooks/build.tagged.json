@@ -1,0 +1,44 @@
+{
+    "build": {
+        "artifacts_url": "{{ env.DJINN_API_SERVER }}/b/wallace.breen/1/artifacts",
+        "created_at": "2021-10-02T15:50:40Z",
+        "finished_at": null,
+        "id": 4,
+        "jobs_url": "{{ env.DJINN_API_SERVER }}/b/wallace.breen/1/jobs",
+        "manifest": "namespace: blackmesa@wallace.breen\ndriver:\n  image: golang\n  type: docker\n  workspace: /go",
+        "namespace_id": 4,
+        "number": 1,
+        "objects_url": "{{ env.DJINN_API_SERVER }}/b/wallace.breen/1/objects",
+        "output": null,
+        "started_at": null,
+        "status": "queued",
+        "tags": [
+            "docker",
+            "golang"
+        ],
+        "tags_url": "{{ env.DJINN_API_SERVER }}/b/wallace.breen/1/tags",
+        "url": "{{ env.DJINN_API_SERVER }}/b/wallace.breen/1",
+        "user": {
+            "created_at": "2021-10-02T15:50:38Z",
+            "email": "wallace.breen@black-mesa.com",
+            "id": 3,
+            "username": "wallace.breen"
+        },
+        "user_id": 3,
+        "variables_url": "{{ env.DJINN_API_SERVER }}/b/wallace.breen/1/variables"
+    },
+    "tags": [{
+        "name": "docker",
+        "url": "{{ env.DJINN_API_SERVER }}/b/wallace.breen/1/tags/docker"
+    }, {
+        "name": "golang",
+        "url": "{{ env.DJINN_API_SERVER }}/b/wallace.breen/1/tags/golang"
+    }],
+    "url": "{{ env.DJINN_API_SERVER }}/b/wallace.breen/1/tags",
+    "user": {
+        "created_at": "2021-10-02T15:50:38Z",
+        "email": "gordon.freeman@black-mesa.com",
+        "id":1,
+        "username": "gordon.freeman"
+    }
+}

@@ -1,0 +1,3 @@
+<ul class="nav">
+	<li><a class="{% if page.previous_page is none %}disabled{% else %}prev{% endif %}" {% if page.previous_page %}href="{{ page.previous_page.url | url }}"{% endif %}>Prev</a></li><li><a class="{% if page.next_page is none %}disabled{% else %}next{% endif %}" {% if page.next_page %}href="{{ page.next_page.url | url }}"{% endif %}>Next</a></li>
+</ul>

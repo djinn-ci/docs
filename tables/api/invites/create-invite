@@ -1,0 +1,13 @@
+
+
+- NAME
+- TYPE
+- REQUIRED
+- DESCRIPTION
+
+---
+
+- `handle`
+- `string`
+- Yes
+- The username of email of the user to invite.

@@ -1,0 +1,57 @@
+{% macro code_toc_endpoints(title, endpoints, class="") %}
+	<div class="{{ class }} code-snippet code-toc">
+		<div class="code-snippet-header">
+			<div class="title">{{ title }}</div>
+		</div>
+		<ul class="endpoint-list">
+			{% for endpoint in endpoints %}
+				<li><code class="endpoint-method">{{ endpoint[0] }}</code><a href="#{{ endpoint[2] }}"><code>{{ endpoint[1] }}</code></a></li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endmacro %}
+
+{% macro code_toc(title, items, class="") %}
+	<div class="{{ class }} code-snippet code-toc">
+		<div class="code-snippet-header">
+			<div class="title">{{ title }}</div>
+		</div>
+		<ul>
+			{% for it in items %}
+				<li><a href="#{{ it | slug }}"><code>{{ it }}</code></a></li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endmacro %}
+
+{% macro code_snippet(title, file, class="") %}
+	<div class="{{ class }} code-snippet">
+		<div class="code-snippet-header">
+			<div class="title">
+				<a data-accordion="{{ title | slug }}">{% include "svg/close.svg" %}</a>{{ title }}
+			</div>
+			<a class="copy" data-copy="{{ title | slug }}">{% include "svg/content_copy.svg" %}</a>
+		</div>
+		<pre data-accordion-body="{{ title | slug }}" data-copy-content="{{ title | slug }}">{% include file %}</pre>
+	</div>
+{% endmacro %}
+
+{% macro endpoints(endpoints) %}
+	<div class="doc-right">
+		<div class="code-snippet">
+			<div class="code-snippet-header"><div class="title">Endpoints</div></div>
+			{% for endpoint in endpoints %}
+				<div>{{ endpoint[0] }} {{ endpoint[1] }}</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro table(title, name, id=True) %}
+	<div class="table">
+		{% if title != "" %}
+			<div class="table-title" {% if id %}id="{{ title | slug }}"{% endif %}>{{ title }}</div>
+		{% endif %}
+		{% table name %}
+	</div>
+{% endmacro %}

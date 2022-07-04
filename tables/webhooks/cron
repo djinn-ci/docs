@@ -1,0 +1,21 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `action`
+- `enum`
+- The action performed on the cron, will be one of:
+\
+* `created`
+* `updated`
+* `deleted`
+
+---
+
+- `cron`
+- `object`
+- The [cron](/api/cron#cron-object) the action was performed on.

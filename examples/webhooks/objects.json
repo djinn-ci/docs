@@ -1,0 +1,55 @@
+{
+    "action": "created",
+    "object": {
+        "id": 1,
+        "author_id": 1,
+        "user_id": 3,
+        "namespace_id": 4,
+        "name": "crowbar",
+        "type": "image/png",
+        "size": 319,
+        "md5": "156dd0abff851609fb5aa6f3b0294d12",
+        "sha256": "a05299b5741aad88839cd9916cd5647caa1c992247ac13dd48e230b7ca335979",
+        "created_at": "2021-10-07T20:21:28Z",
+        "url": "{{ env.DJINN_API_SERVER }}/objects/1",
+        "author": {
+            "id": 1,
+            "email": "gordon.freeman@black-mesa.com",
+            "username": "gordon.freeman",
+            "created_at": "2021-10-07T20:20:04Z"
+        },
+        "user": {
+            "id": 3,
+            "email": "wallace.breen@black-mesa.com",
+            "username": "wallace.breen",
+            "created_at": "2021-10-07T20:20:04Z"
+        },
+        "namespace": {
+            "id": 4,
+            "user_id": 3,
+            "root_id": 4,
+            "parent_id": null,
+            "name": "blackmesa",
+            "path": "blackmesa",
+            "description": "Black Mesa",
+            "visibility": "private",
+            "created_at": "2021-10-06T19:01:36Z",
+            "url": "{{ env.DJINN_API_SERVER }}/n/wallace.breen/blackmesa",
+            "builds_url": "{{ env.DJINN_API_SERVER }}/n/wallace.breen/blackmesa/-/builds",
+            "namespaces_url": "{{ env.DJINN_API_SERVER }}/n/wallace.breen/blackmesa/-/namespaces",
+            "images_url": "{{ env.DJINN_API_SERVER }}/n/wallace.breen/blackmesa/-/images",
+            "objects_url": "{{ env.DJINN_API_SERVER }}/n/wallace.breen/blackmesa/-/objects",
+            "variables_url": "{{ env.DJINN_API_SERVER }}/n/wallace.breen/blackmesa/-/variables",
+            "keys_url": "{{ env.DJINN_API_SERVER }}/n/wallace.breen/blackmesa/-/keys",
+            "invites_url": "{{ env.DJINN_API_SERVER }}/n/wallace.breen/blackmesa/-/invites",
+            "collaborators_url": "{{ env.DJINN_API_SERVER }}/n/wallace.breen/blackmesa/-/collaborators",
+            "webhooks_url": "{{ env.DJINN_API_SERVER }}/n/wallace.breen/blackmesa/-/webhooks",
+            "user": {
+                "created_at": "2021-10-06T19:01:36Z",
+                "email": "wallace.breen@black-mesa.com",
+                "id": 3,
+                "username": "wallace.breen"
+            }
+        }
+    }
+}

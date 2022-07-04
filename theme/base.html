@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ "css/main.css" | url }}">
+	{% block htmltitle %}
+		<title>{{ config.site_name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+	{% endblock %}
+	<body>
+		<div class="doc">
+			{% block content %}
+				{{ page.content }}
+				{% include "nav.html" %}
+			{% endblock %}
+		</div>
+		<div class="sidebar">
+			<div class="sidebar-header">
+				<div class="logo">
+					<div class="handle"></div>
+					<div class="lid"></div>
+					<div class="lantern"></div>
+				</div>
+				<h2>Djinn CI Docs</h2>
+			</div>
+			{% block site_nav %}
+				<ul class="sidebar-nav">
+					{% for nav_item in nav %}
+						{% if nav_item.children %}
+							<li class="sidebar-nav-header">{{ nav_item.title.upper() }}</li>
+							{% for nav_item in nav_item.children %}
+								<li><a class="{% if nav_item.active %}active{% endif %}" href="{{ nav_item.url | url }}">{{ nav_item.title }}</a></li>
+							{% endfor %}
+						{% else %}
+							<li><a class="{% if nav_item.active %}active{% endif %}" href="{{ nav_item.url | url }}">{{ nav_item.title }}</a></li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			{% endblock %}
+		</div>
+		<script type="text/javascript" src="{{ "js/doc.js" | url }}"></script>
+		<script type="text/javascript">var base_url = "{{ base_url }}";</script>
+		{% for path in extra_javascript %}
+			<script type="text/javascript" src="{{ path }}" defer></script>
+		{% endfor %}
+	</body>
+</html>

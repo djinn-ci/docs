@@ -1,0 +1,27 @@
+
+
+- NAME
+- TYPE
+- REQUIRED
+- DESCRIPTION
+
+---
+
+- `manifest`
+- `string`
+- Yes
+- The YAML formatted build [manifest](/user/manifest).
+
+---
+
+- `comment`
+- `string`
+- No
+- The build's comment.
+
+---
+
+- `tags`
+- `string[]`
+- No
+- A list of tags to attach to the build.

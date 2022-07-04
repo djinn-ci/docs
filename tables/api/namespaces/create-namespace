@@ -1,0 +1,40 @@
+
+
+- NAME
+- TYPE
+- REQUIRED
+- DESCRIPTION
+
+---
+
+- `parent`
+- `string`
+- No
+- The name of the parent namespace to create the new namespace under.
+
+---
+
+- `name`
+- `string`
+- Yes
+- The name of the new namespace.
+
+---
+
+- `description`
+- `string`
+- No
+- The deescription of the namespace.
+
+---
+
+- `visibility`
+- `enum`
+- No
+- The visibility level of the namespace, will be one of:
+\
+* `private`
+* `internal`
+* `public`
+\
+This will default to `private`, if not otherwise specified.

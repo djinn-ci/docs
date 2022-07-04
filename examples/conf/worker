@@ -1,0 +1,60 @@
+
+
+pidfile "/var/run/djinn/worker.pid"
+
+log info "/var/log/djinn/worker.log"
+
+parallelism 0
+
+driver "qemu"
+
+timeout "30m"
+
+provider github {}
+provider gitlab {}
+
+crypto {
+    block "1a2b3c4d5e6f7g8h"
+    salt  "1a2b3c4d5e6f7g8h"
+}
+
+database {
+    addr "localhost:5432"
+    name "djinn"
+
+    username "djinn_worker"
+    password "secret"
+}
+
+redis {
+    addr "localhost:6379"
+}
+
+smtp {
+    addr "smtp.example.com:587"
+
+    ca "/etc/ssl/cert.pem"
+
+    admin "no-reply@djinn-ci.com"
+
+    username "postmaster@example.com"
+    password "secret"
+}
+
+store artifacts {
+    type  "file"
+    path  "/var/lib/djinn/artifacts"
+    limit 52428800
+}
+
+store images {
+    type "file"
+    path "/var/lib/djinn/images"
+}
+
+store objects {
+    type "file"
+    path "/var/lib/djinn/objects"
+}
+
+

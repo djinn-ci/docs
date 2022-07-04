@@ -1,0 +1,29 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `build`
+- `object`
+- The [build](/api/builds#build-object) that was tagged.
+
+---
+
+- `tags`
+- `object[]`
+- The array of [tags](/api/builds#tag-object) on the build.
+
+---
+
+- `url`
+- `string`
+- The API URL to the build's tags.
+
+---
+
+- `user`
+- `object`
+- The [user](/api/user#user-object) that tagged the build.

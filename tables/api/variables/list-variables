@@ -1,0 +1,11 @@
+
+
+- NAME
+- TYPE
+- DESCRIPTION
+
+---
+
+- `search`
+- `string`
+- Get the variables with names like the given value.

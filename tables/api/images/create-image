@@ -1,0 +1,28 @@
+
+
+- NAME
+- TYPE
+- REQUIRED
+- DESCRIPTION
+
+---
+
+- `name`
+- `string`
+- Yes
+- The name of the image to create.
+
+---
+
+- `namespace`
+- `string`
+- No
+- The namespace to upload the image to.
+
+---
+
+- `download_url`
+- `string`
+- No*
+- The URL to download the image from. Only required if the image is being
+downloaded.

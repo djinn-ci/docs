@@ -1,0 +1,5 @@
+$ curl -X POST \
+	-H "Content-Type: application/json" \
+	-H "Authorization: Bearer 1a2b3c4d5f" \
+	-d '{"manifest":"namespace: djinn\ndriver:\n  image: centos/7\n  type: qemu\nenv:\n- LOCALE=en_GB.UTF-8\nobjects:\n- data => data\nstages:\n- clean\njobs:\n- stage: clean\n  commands:\n  - tr -d '0-9' data > data.cleaned\n  artifacts:\n  - data.cleaned => data.cleaned"}' \
+	{{ env.DJINN_API_SERVER }}/builds
