@@ -131,10 +131,10 @@ This will return the [namespace](#namespace-entity).
 
 <div class="doc-content panel" markdown>
 <div class="panel-body" markdown>
-This will get the badge of the [namespace](#namespace-entity) by the given
-`:username`, with the given `:path`. The badge will display the status of the
-most recently submitted build. This does not require any permission, instead
-the namespace visibility applies.
+This will return an SVG badge of the [namespace](#namespace-entity) by the
+given `:username`, with the given `:path`. This SVG will show the status of
+the most recently submitted build to the namespace. This requires no permission
+for the user.
 
 ### Returns
 

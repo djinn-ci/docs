@@ -15,7 +15,8 @@
 		<text x="83" y="14">unknown</text>
 	</g>
 </svg>
-- No build has been submitted to the namespace.
+- No build has been submitted to the namespace, or the namespace is set to
+`private` or `internal` and therefore the status cannot be seen.
 
 ---
 
