@@ -1,0 +1,36 @@
+namespace: djinn
+driver:
+  type: qemu
+  image: debian/stable
+sources:
+- https://github.com/mkdocs/mkdocs
+- https://github.com/dldevinc/jinja2-simple-tags
+- https://github.com/djinn-ci/docs
+env:
+- DJINN_API_SERVER=https://api.djinn-ci.com
+- DJINN_SERVER=https://djinn-ci.com
+stages:
+- deps
+- build
+jobs:
+- stage: deps
+  commands:
+  - apt install -y python3 python3-pip yarnpkg
+  - pip3 install jinja2 mkdocs-minify-plugin
+  - cd jinja2-simple-tags
+  - python3 setup.py install
+  - cd -
+  - cd mkdocs
+  - python3 setup.py install
+- stage: job
+  commands:
+  - cd docs
+  - yarnpkg install
+  - ./node_modules/.bin/lessc --clean-css less/main.less theme/css/main.css
+  - cd plugins
+  - python3 setup.py install
+  - cd -
+  - mkdocs build
+  - tar -czf site.tar.gz site
+  artifacts:
+  - docs/site.tar.gz
