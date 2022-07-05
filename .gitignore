@@ -4,3 +4,4 @@ __pycache__/
 plugins/build/
 plugins/dist/
 plugins/*.egg-info/
+*.tar.gz
