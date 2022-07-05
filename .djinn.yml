@@ -22,7 +22,7 @@ jobs:
   - cd -
   - cd mkdocs
   - python3 setup.py install
-- stage: job
+- stage: build
   commands:
   - cd docs
   - yarnpkg install
