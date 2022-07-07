@@ -73,3 +73,41 @@
 		});
 	}
 })();
+
+(function() {
+	var doc = document.querySelector(".doc");
+
+	var toggle = document.querySelector("[data-nav-toggle]");
+	var nav = document.querySelector("#" + toggle.dataset.navToggle);
+
+	var active = nav.querySelector(".active");
+	var curr = active.parentNode.previousElementSibling;
+
+	var title = "";
+
+	while (true) {
+		if (curr == null) {
+			break;
+		}
+
+		if (curr.classList.contains("nav-header")) {
+			title = curr.innerText + " / ";
+			break;
+		}
+		curr = curr.previousElementSibling;
+	}
+
+	document.querySelector("#nav-title").innerText = title + active.innerText;
+
+	toggle.addEventListener("click", function(e) {
+		e.preventDefault();
+
+		nav.hidden = !nav.hidden;
+	});
+
+	doc.addEventListener("click", function(e) {
+		if ( ! nav.hidden) {
+			nav.hidden = true;
+		}
+	});
+})();

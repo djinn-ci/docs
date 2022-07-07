@@ -6,7 +6,7 @@
 
 <div class="doc-section" markdown>
 
-## Authoriziing an OAuth app
+## Authorizing an OAuth app
 
 <div class="doc-content panel" markdown>
 <div class="panel-body" markdown>

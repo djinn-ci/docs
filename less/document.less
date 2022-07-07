@@ -1,7 +1,7 @@
 .doc {
 	line-height: 1.5;
 	word-wrap: break-word;
-	margin-left: 300px;
+	margin-left: 225px;
 	padding: 25px;
 
 	.doc-content {
@@ -14,7 +14,7 @@
 
 	.doc-content {
 		float: left;
-		width: 40%;
+		width: 500px;
 	}
 
 	.doc-section > h2:first-child {
@@ -24,5 +24,31 @@
 	.doc-section {
 		overflow: auto;
 		padding-bottom: 15px;
+	}
+}
+@media screen and (max-width: 1308px) {
+	.doc {
+		.doc-content {
+			float: left;
+			width: 48%;
+		}
+
+		p + .doc-content {
+			margin-top: 15px;
+		}
+	}
+}
+@media screen and (max-width: 1240px) {
+	.doc {
+		.doc-content {
+			float: none;
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width: 1000px) {
+	.doc {
+		margin-left: 0px;
+		margin-top: 40px;
 	}
 }

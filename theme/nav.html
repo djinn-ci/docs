@@ -1,3 +1,12 @@
-<ul class="nav">
-	<li><a class="{% if page.previous_page is none %}disabled{% else %}prev{% endif %}" {% if page.previous_page %}href="{{ page.previous_page.url | url }}"{% endif %}>Prev</a></li><li><a class="{% if page.next_page is none %}disabled{% else %}next{% endif %}" {% if page.next_page %}href="{{ page.next_page.url | url }}"{% endif %}>Next</a></li>
+<ul>
+	{% for nav_item in nav %}
+		{% if nav_item.children %}
+			<li class="nav-header">{{ nav_item.title.upper() }}</li>
+			{% for nav_item in nav_item.children %}
+				<li><a class="{% if nav_item.active %}active{% endif %}" href="{{ nav_item.url | url }}">{{ nav_item.title }}</a></li>
+			{% endfor %}
+		{% else %}
+			<li><a class="{% if nav_item.active %}active{% endif %}" href="{{ nav_item.url | url }}">{{ nav_item.title }}</a></li>
+		{% endif %}
+	{% endfor %}
 </ul>

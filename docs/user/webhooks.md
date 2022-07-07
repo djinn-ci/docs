@@ -21,7 +21,7 @@ another automated process.
 Navigate to the [namespace](/user/namespaces) you want to configure the webhook
 for. From the *Webhooks* tab, you will be able to create a new webhook via the
 *Create webhook* button. Webhooks can also be created via the
-[REST API](/api/namespaces#create-a-webhook-for-the-namespace).
+[REST API](/api/namespaces#create-namespace-webhook).
 
 ## Signing webhooks
 
@@ -40,7 +40,6 @@ digest, then compare that with what's in the header.
 
 </div>
 </div>
-
 {{ code_toc("EVENTS", ["build.submitted",
 	"build.started",
 	"build.finished",

@@ -1,15 +1,21 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<link rel="stylesheet" href="{{ "css/main.css" | url }}">
 	{% block htmltitle %}
 		<title>{{ config.site_name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
 	{% endblock %}
 	<body>
+		<div class="mobile-nav">
+			<a class="toggle" data-nav-toggle="nav-menu">{% include "menu.svg" %}</a>
+			<div class="nav-title" id="nav-title"></div>
+			<div class="nav-menu" id="nav-menu" hidden="true">{%- include "nav.html" -%}</div>
+		</div>
 		<div class="doc">
 			{% block content %}
 				{{ page.content }}
-				{% include "nav.html" %}
+				{%- include "pagenav.html" -%}
 			{% endblock %}
 		</div>
 		<div class="sidebar">
@@ -22,18 +28,7 @@
 				<h2>Djinn CI Docs</h2>
 			</div>
 			{% block site_nav %}
-				<ul class="sidebar-nav">
-					{% for nav_item in nav %}
-						{% if nav_item.children %}
-							<li class="sidebar-nav-header">{{ nav_item.title.upper() }}</li>
-							{% for nav_item in nav_item.children %}
-								<li><a class="{% if nav_item.active %}active{% endif %}" href="{{ nav_item.url | url }}">{{ nav_item.title }}</a></li>
-							{% endfor %}
-						{% else %}
-							<li><a class="{% if nav_item.active %}active{% endif %}" href="{{ nav_item.url | url }}">{{ nav_item.title }}</a></li>
-						{% endif %}
-					{% endfor %}
-				</ul>
+				<div class="sidebar-nav">{%- include "nav.html" -%}</div>
 			{% endblock %}
 		</div>
 		<script type="text/javascript" src="{{ "js/doc.js" | url }}"></script>
