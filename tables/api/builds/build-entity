@@ -59,6 +59,12 @@ to, if any.
 
 ---
 
+- `pinned`
+- `bool`
+- Whether or not the build has been pinned.
+
+---
+
 - `created_at`
 - `timestamp`
 - The RFC3339 formatted string at which the build was created.

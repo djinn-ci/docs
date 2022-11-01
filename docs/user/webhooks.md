@@ -44,6 +44,8 @@ digest, then compare that with what's in the header.
 	"build.started",
 	"build.finished",
 	"build.tagged",
+	"build.pinned",
+	"build.unpinned",
 	"invite.sent",
 	"invite.accepted",
 	"invite.rejected",

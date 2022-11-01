@@ -62,6 +62,8 @@
 		("GET", "/b/:user/:number/tags", "get-build-tags"),
 		("POST", "/b/:user/:number/tags", "create-build-tag"),
 		("DELETE", "/b/:user/:number/tags/:name", "delete-build-tag"),
+		("PATCH", "/b/:user/:number/pin", "pin-build"),
+		("PATCH", "/b/:user/:number/unpin", "unpin-build"),
 		("DELETE", "/b/:user/:number", "kill-build"),
 	], class="doc-content") }}
 
@@ -318,6 +320,43 @@ This returns no content in the response body.
 </div>
 
 {{ code_snippet("POST /b/:user/:number/tags/:name", "examples/curl/delete-build-tag", class="doc-content") }}
+
+</div>
+
+<div class="doc-section" markdown>
+
+## Pin build
+
+<div class="doc-content panel" markdown>
+<div class="panel-body" markdown>
+This will pin the given build. This requires the `build:write` permission.
+
+### Returns
+
+This returns the [build](#build-entity).
+</div>
+</div>
+
+{{ code_snippet("PATCH /b/:user/:number/pin", "examples/curl/pin-build", class="doc-content") }}
+
+</div>
+
+<div class="doc-section" markdown>
+
+## Unpin build
+
+<div class="doc-content panel" markdown>
+<div class="panel-body" markdown>
+This will unpin the given build. This requires the `build:write` permission.
+
+### Returns
+
+This returns the [build](#build-entity).
+
+</div>
+</div>
+
+{{ code_snippet("PATCH /b/:user/:number/unpin", "examples/curl/unpin-build", class="doc-content") }}
 
 </div>
 

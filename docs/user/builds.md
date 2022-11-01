@@ -18,6 +18,7 @@ the stages and their respective jobs to execute, and the artifacts to collect.
   * [Stage execution](#stage-execution)
   * [Driver destruction](#driver-destruction)
 * [What a job looks like](#what-a-job-looks-like)
+* [Build artifacts](#build-artifacts)
 
 ## Statuses
 
@@ -82,9 +83,9 @@ then the driver is destroyed.
 
 ## What a job looks like
 
-Each job in a build is treated as an individual shell script. All of the
-commands in a job are concatenated together and put into a single script, for
-example the following job,
+For the QEMU and Docker drivers, each job in a build is treated as an individual
+shell script. All of the commands in a job are concatenated together and put
+into a single script, for example the following job,
 
 </div>
 
@@ -112,6 +113,13 @@ would become the shell script,
 <div class="panel-body" markdown>
 
 each shell script is placed into the build environment and then executed.
+
+## Build artifacts
+
+Artifacts are collected from each build job after the job has completed. These
+artifacts are deleted during curation when they exceed the configured cleanup
+threshold, by default this is 1GB. If a build is pinned however, then its
+artifacts will not be deleted.
 
 </div>
 </div>
