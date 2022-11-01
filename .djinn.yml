@@ -21,16 +21,17 @@ jobs:
   - python3 setup.py install
   - cd -
   - cd mkdocs
-  - python3 setup.py install
+  - python3 -m pip install .
 - stage: build
   commands:
   - cd docs
   - yarnpkg install
   - ./node_modules/.bin/lessc --clean-css less/main.less theme/css/main.css
   - cd plugins
-  - python3 -m pip install
+  - python3 setup.py install
   - cd -
   - mkdocs build
-  - tar -czf site.tar.gz site
+  - mv site docs.djinn-ci.com
+  - tar -czf docs.djinn-ci.com.tar.gz docs.djinn-ci.com
   artifacts:
-  - docs/site.tar.gz
+  - docs/docs.djinn-ci.com.tar.gz
