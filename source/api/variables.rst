@@ -180,7 +180,7 @@ requires the ``variable:delete`` permission.
 =============================  ===========
 STATUS CODE                    BODY
 =============================  ===========
-``204 No Content``             
+``204 No Content``
 ``404 Not Found``              Will happen when unauthorized.
 ``500 Internal Server Error``  :ref:`Internal error <internal-errors>` response.
 =============================  ===========

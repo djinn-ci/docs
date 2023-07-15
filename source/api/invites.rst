@@ -98,7 +98,7 @@ NAME               TYPE           REQUIRED  DESCRIPTION
        -H "Content-Type: application/json" \
        -d '{"handle": "you"}' \
        https://api.djinn-ci.com/n/me/djinn/-/invites
-   
+
    $ curl -X POST \
        -H "Authorization: Bearer 1a2b3c4d5f" \
        -H "Content-Type: application/json" \
@@ -162,7 +162,7 @@ requires the ``invite:delete`` permission.
 =============================  ===========
 STATUS CODE                    BODY
 =============================  ===========
-``204 No Content``             
+``204 No Content``
 ``404 Not Found``              Will happen when unauthorized.
 ``500 Internal Server Error``  :ref:`Internal error <internal-errors>` response.
 =============================  ===========

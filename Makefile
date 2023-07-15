@@ -13,7 +13,7 @@ help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 lint:
-	sphinx-lint -i .git -i _build -i theme -i source/conf.py
+	sphinx-lint -i .git -i _build -i theme -i source/conf.py -i genbadges.py
 
 .PHONY: help Makefile
 

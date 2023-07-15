@@ -76,7 +76,7 @@ NAME                          TYPE           DESCRIPTION
                               ``nullable``   webhook, if any.
 ``last_response.code``        ``int``        The HTTP status codde of the response.
 ``last_response.duration``    ``int``        The duration of the webhook request
-                                             in nanoseconds. 
+                                             in nanoseconds.
 ``last_response.error``       ``string``     The error that occurred if the webhook
                               ``nullable``   failed to be delivered.
 ``last_response.created_at``  ``timestamp``  The RFC3339 formatted string at
@@ -656,7 +656,7 @@ given ``:path``. This requires the ``webhook:delete`` permission for the user.
 =============================  ===========
 STATUS CODE                    BODY
 =============================  ===========
-``204 No Content``             
+``204 No Content``
 ``404 Not Found``              Will happen when unauthorized.
 ``500 Internal Server Error``  :ref:`Internal error <internal-errors>` response.
 =============================  ===========
@@ -731,7 +731,7 @@ permission.
 =============================  ===========
 STATUS CODE                    BODY
 =============================  ===========
-``204 No Content``             
+``204 No Content``
 ``404 Not Found``              Will happen when unauthorized.
 ``500 Internal Server Error``  :ref:`Internal error <internal-errors>` response.
 =============================  ===========
