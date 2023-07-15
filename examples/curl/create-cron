@@ -1,5 +1,0 @@
-$ curl -X POST \
-	-H "Content-Type: application/json" \
-	-H "Authorization: Bearer 1a2b3c4d5f" \
-	-d '{"name": "Daily", "manifest": "driver:\n  image: centos/7\n  type: qemu"}' \
-	{{ env.DJINN_API_SERVER }}/cron

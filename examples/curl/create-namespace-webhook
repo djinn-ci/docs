@@ -1,5 +1,0 @@
-$ curl -X POST \
-	-H "Content-Type: application/json" \
-	-H "Authorization: Bearer 1a2b3c4d5f" \
-	-d '{"payload_url": "https://example.com/hook/djinn-ci", "ssl": true, "active": true}' \
-	{{ env.DJINN_API_SERVER }}/n/me/djinn/-/webhooks

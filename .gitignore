@@ -1,7 +1,4 @@
-site/
-node_modules/
+build/
 __pycache__/
-plugins/build/
-plugins/dist/
-plugins/*.egg-info/
 *.tar.gz
+build-table.html

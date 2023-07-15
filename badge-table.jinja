@@ -1,0 +1,16 @@
+<table class="docutils align-default">
+	<thead>
+		<tr class="row-odd">
+			<th class="head">BADGE</th>
+			<th class="head">DESCRIPTION</th>
+		</tr>
+	</thead>
+	<tbody>
+		{%- for badge in badges -%}
+			<tr>
+				<td><p>{{ badge.html }}</p></td>
+				<td><p>{{ badge.desc }}</p></td>
+			</tr>
+		{%- endfor -%}
+	</tbody>
+</table>

@@ -1,3 +1,0 @@
-# Djinn CI documentation
-
-

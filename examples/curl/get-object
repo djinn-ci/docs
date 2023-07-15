@@ -1,8 +1,0 @@
-$ curl -X GET \
-	-H "Authorization: Bearer 1a2b3c4d5f" \
-	{{ env.DJINN_API_SERVER }}/objects/3
-
-$ curl -X GET \
-	-H "Accept: image/jpeg" \
-	-H "Authorization: Bearer 1a2b3c4d5f" \
-	{{ env.DJINN_API_SERVER }}/objects/3

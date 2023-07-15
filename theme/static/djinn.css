@@ -1,0 +1,210 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #eee;
+	color: #444;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Sego UI Symbol";
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+.document section {
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+.document .document-wrap {
+	margin-left: 225px;
+}
+.document .document-content {
+	align-items: flex-start;
+	display: flex;
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 25px;
+}
+.document-content .document-body {
+	box-sizing: border-box;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+}
+.document-content a {
+	color: #146de0;
+	cursor: pointer;
+	text-decoration: none;
+}
+.document-content a:hover {
+	text-decoration: underline;
+}
+.document-content .document-nav {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	padding-left: 5px;
+	width: 25%;
+	overflow-y: scroll;
+	top: 0;
+	position: sticky;
+	height: 100vh;
+}
+.document-nav .page-nav li {
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-left: 1em;
+}
+.document-nav .page-nav li a.disabled {
+	color: #aaaa;
+	cursor: not-allowed;
+}
+.document-nav .page-nav li a.disabled:hover {
+	text-decoration: none;
+}
+.document-content .document-toc ul {
+	list-style: none;
+	padding-left: 1em;
+}
+.document-content .document-toc ul li {
+	padding-top: 5px;
+}
+.document .document-sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 225px;
+	background: #383e51;
+	overflow: auto;
+	font-size: 14px;
+}
+.document-sidebar ul {
+	list-style: none;
+}
+.document-sidebar .caption[role="heading"] {
+	color: #fff;
+	font-weight: 700;
+	padding: 15px;
+}
+.document-sidebar a {
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.5);
+}
+.document-sidebar a.current {
+	text-decoration: none;
+	color: #fff;
+	background: #272b39;
+}
+.document-sidebar a:hover {
+	text-decoration: none;
+	color: #fff;
+	background: #272b39;
+}
+section .headerlink {
+	visibility: hidden;
+	text-decoration: none;
+	color: #146de0;
+	font-size: 14px;
+	vertical-align: middle;
+}
+:target > h2:first-of-type, :target > h3:first-of-type {
+	background-color: #ffc;
+}
+section .headerlink::after {
+	content: "¶";
+	visibility: hidden;
+}
+section h2:hover .headerlink::after {
+	visibility: visible; 
+}
+section h3:hover .headerlink::after {
+	visibility: visible; 
+}
+section > section {
+	border-bottom: solid 1px #e4e4e4;
+}
+section > section:last-child {
+	border: none;
+}
+section h1 {
+	padding: 15px;
+}
+section h2 {
+	padding: 15px;
+}
+section h3 {
+	padding: 15px;
+}
+section p {
+	padding: 15px;
+}
+section ul {
+	list-style: inside;
+	padding: 15px;
+}
+section ul p {
+	display: inline-block;
+	padding: 0px;
+}
+section table {
+	border-collapse: collapse;
+	width: 100%;
+}
+section table thead {
+	border-top: solid 1px #e4e4e4;
+}
+section table th {
+	background: rgba(0, 0, 0, 0.03);
+	border-bottom: solid 1px #e4e4e4;
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 14px;
+	font-weight: 400;
+	text-align: left;
+	padding: 10px;
+}
+section table p {
+	display: inline-block;
+	margin: 0;
+	padding: 0px;
+}
+section table tr {
+	border-bottom: solid 1px #e4e4e4;
+}
+section table tr:last-child {
+	border: none;
+}
+section table td {
+	vertical-align: top;
+	padding: 10px;
+}
+section p code {
+	background: rgba(0, 0, 0, 0.03);
+	border: solid 1px #e4e4e4;
+	border-radius: 3px;
+	padding: 3px;
+}
+section pre {
+	background :#383e51;
+	color: #fff;
+	overflow: auto;
+	padding: 15px;
+}
+.admonition {
+	margin: 15px;
+}
+.admonition.note {
+	background: #eee;
+	border-left: solid 3px #ccc;
+}
+.admonition .admonition-title {
+	font-size: 24px;
+}
+.admonition p {
+	margin-left: 3px;
+	padding: 5px;
+}

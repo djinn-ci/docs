@@ -1,0 +1,66 @@
+{%- set titlesuffix = " &#8212; " | safe + docstitle | e %}
+
+{%- macro page_nav() %}
+	<ul class="page-nav">
+		{% if prev %}
+			<li><a href="{{ prev.link | e }}">Prev</a></li>
+		{% else %}
+			<li><a class="disabled">Prev</a></li>
+		{% endif %}
+		{% if next %}
+			<li><a href="{{ next.link | e }}">Next</a></li>
+		{% else %}
+			<li><a class="disabled">Next</a></li>
+		{% endif %}
+	</ul>
+{%- endmacro %}
+
+{%- macro doc_nav() %}
+	<div class="document-nav">
+		{{ page_nav() }}
+		{%- if display_toc and pagename != "index" %}
+			<div class="document-toc">{{ toc }}</div>
+		{%- endif %}
+	</div>
+{%- endmacro %}
+
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>{{ title | striptags | e }}{{ titlesuffix }}</title>
+		{%- if favicon_url %}
+			<link rel="icon" href="{{ favicon_url | e }}"/>
+		{%- endif %}
+		{%- for css in css_files %}
+			{{ css_tag(css) }}
+		{%- endfor %}
+	</head>
+	<body>
+		<div class="document">
+			<div class="document-wrap">
+				<div class="document-content">
+					{% block body %}{% endblock %}
+					{{ doc_nav() }}
+				</div>
+			</div>
+			<div class="document-sidebar">
+				<a href="{{ pathto(root_doc) | e }}">Home</a>
+				{{ toctree(includehidden=True) }}
+			</div>
+		</div>
+	</body>
+	<footer>
+		<script>
+			var els = document.querySelectorAll(".toctree-l1");
+
+			els.forEach(function(el) {
+				if (el.classList.contains("current")) {
+					el.scrollIntoView();
+					return;
+				}
+			});
+		</script>
+	</footer>
+</html>
