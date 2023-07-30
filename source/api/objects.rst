@@ -155,7 +155,7 @@ Get object builds
 
 This will get the :ref:`builds <build-entity>` the object was placed on. The
 following parameters can be given as query parameters to the URL. This requires
-the ``object:read`` permission.
+the ``object:read`` annd ``build:read`` permissions.
 
 **Parameters**
 
